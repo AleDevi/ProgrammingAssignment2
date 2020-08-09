@@ -8,7 +8,7 @@
 ## I think that this assignment could be better organized (if the aim is what I get). I get lost in the
 ## operations of the functions before getting the scope of the assignment... 
 
-## This function create a list of objects (functions) later used by the cacheSolve() function to 
+## This function creates a list of objects (functions) later used by the cacheSolve() function to 
 ## calculate the A^-1 matrix created in the function itself. The environment within the object created 
 ## with this function contains:
 ## -4 functions (set, get, setinverse and getinverse)
@@ -34,11 +34,11 @@ makeCacheMatrix <- function(x = matrix()) {
 ## The below function works on an object created with makeCacheMatrix(). 
 ## It uses the objects (function listed in a list, the original to be inverted matrix x, and 
 ## the so far empty object I) within the output of makeCacheMatrix().
-## It return a matrix that is the inverse of 'x' and "chaches" it in I (which is inside the 
-## environmet of the result given by makeCacheMatrix). If I is not empty (i.e. the
+## It returns a matrix that is the inverse of 'x' and "chaches" it in I (which is inside the 
+## environment of the result given by makeCacheMatrix). If I is not empty (i.e. the
 ## same matrix has been already inverted and "cached") it gives the stored result.
-## otherwise it calculates the inverted matrix and (using the functions listed in the argument of the 
-## function itself) stores the result in the cache.
+## Otherwise it calculates the inverted matrix and (using the functions listed in the argument of the 
+## function itself) stores the result in the cache. Sounds complicated. It is. Or was.
 
 cacheSolve <- function(x, ...) {
             I <- x$getinverse() 
